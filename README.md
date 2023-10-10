@@ -1,8 +1,10 @@
+# app-store-distributed-hooks
+
 This is a starter repo for using [Haxademic’s AppStoreDistributed](https://github.com/cacheflowe/haxademic.js/blob/master/src/app-store-distributed.es6.js) with React via hooks. The app allows all clients to connect over websockets and share state in real time.
 
 ![AppStoreDistributed Demo](./public/AppStoreDistributed_Demo.gif)
 
-# Installation
+## Installation
 
 Clone the repo, navigate into it, and install the dependencies: 
 ```
@@ -11,7 +13,7 @@ cd app-store-distributed-hooks
 npm install
 ```
 
-## Set your environment variables:
+### Set your environment variables:
 Make a copy of `.env.sample` and name it `.env`. Replace the variables in `.env` with your own local IP address and desired port:
 
 ```
@@ -21,7 +23,7 @@ VITE_WS_PORT=8082
 
 If no variables are set, `VITE_IP_ADDRESS` will default to `localhost`, and the `VITE_WS_PORT` will default to `8082`. The app will work on the device where you run it, but you won’t be able to connect with other devices.
 
-## Start the servers
+### Start the servers
 
 First, start the websocket server. In the root of the project, run:
 ```
@@ -35,7 +37,7 @@ npm run dev
 
 Vite will output a link to open your project in browser, something like `http://localhost:5173`.
 
-# Notes & Features
+## Notes & Features
 This project uses tools from [cacheflowe/haxademic.js](https://github.com/cacheflowe/haxademic.js):
 
 - [SolidSocket](https://github.com/cacheflowe/haxademic.js/blob/master/src/solid-socket.es6.js) — establishes a connection to the websocket server; handles sending and recieving messages, reconnection, and cleanup; exposes listeners.
