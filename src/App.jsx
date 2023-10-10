@@ -1,18 +1,23 @@
-import "./App.css";
 import { useGetValue, setValue } from "./hooks/useHaxademicStore";
 
+const RED = "#e84855";
+const YELLOW = "#f9dc5c";
+const BLUE = "#3185fc";
+
 const App = () => {
-  const x = useGetValue("MOUSE_X", 0);
-  const y = useGetValue("MOUSE_Y", 0);
+  const hexColor = useGetValue("COLOR", "#ffffff");
 
   return (
-    <div className="App">
-      <div>
-        <h1>X: {x}</h1>
-        <h1>Y: {y}</h1>
-      </div>
-      <button onClick={() => setValue("CUSTOM", "Hello World!")}>
-        Send "Hello World!"
+    <div className="App" style={{ backgroundColor: hexColor }}>
+      <h3>AppStoreDistributed<br/>—with hooks!</h3>
+      <button onClick={() => setValue("COLOR", RED)}>
+        Red
+      </button>
+      <button onClick={() => setValue("COLOR", YELLOW)}>
+        Yellow
+      </button>
+      <button onClick={() => setValue("COLOR", BLUE)}>
+        Blue
       </button>
     </div>
   );

@@ -14,5 +14,6 @@ export const useGetValue = (stateKey, defaultValue = null) => {
 };
 
 export const setValue = (key, value, broadcast = true) => {
+  console.log("setValue", key, value, broadcast);
   window._store.set(key, value, broadcast);
 };

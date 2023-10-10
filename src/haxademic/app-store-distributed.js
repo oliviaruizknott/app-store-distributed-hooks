@@ -21,7 +21,7 @@ class AppStoreDistributed extends AppStore {
     if (jsonData["store"] && jsonData["type"]) {
       this.set(jsonData["key"], jsonData["value"]);
     } else {
-      this.set("json", jsonData);
+      this.set("CUSTOM_JSON", jsonData);
       // this.set('json', event.data); // just to see data in AppStoreDebug
     }
   }
