@@ -1,4 +1,5 @@
 import { useGetValue, setValue } from "./hooks/useHaxademicStore";
+import AppStoreDebug from "../components/debug/AppStoreDebug";
 
 const RED = "#e84855";
 const YELLOW = "#f9dc5c";
@@ -9,6 +10,7 @@ const App = () => {
 
   return (
     <div className="App" style={{ backgroundColor: hexColor }}>
+      <AppStoreDebug />
       <h3>AppStoreDistributed<br/>—with hooks!</h3>
       <button onClick={() => setValue("COLOR", RED)}>
         Red

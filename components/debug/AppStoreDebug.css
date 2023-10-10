@@ -1,0 +1,36 @@
+/* Socket connectivity indicator */
+#socket-indicator {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.has-socket #socket-indicator {
+  background-color: rgba(0, 255, 0, 1);
+}
+.no-socket #socket-indicator {
+  background-color: rgba(255, 0, 0, 1);
+}
+
+/* Debug panel */
+#debug-panel {
+  font-family: arial;
+  font-size: 12px;
+  text-align: left;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 12px;
+  height: 100%;
+  max-width: 80%;
+  overflow-y: auto;
+  opacity: 0.9;
+  z-index: 9999;
+  background: rgba(0,0,0,0.8);
+  color: #fff !important;
+}

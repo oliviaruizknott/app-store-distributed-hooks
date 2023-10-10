@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
 
 export const useGetValue = (stateKey, defaultValue = null) => {
-  const store = window._store;
-  const [value, setValue] = useState(store.get(stateKey) || defaultValue);
+  const [value, setValue] = useState(_store.get(stateKey) || defaultValue);
 
   useEffect(() => {
-    store.addListener({
+    _store.addListener({
       storeUpdated: (k, v) => k === stateKey && setValue(v),
     });
   }, []);
@@ -15,5 +14,5 @@ export const useGetValue = (stateKey, defaultValue = null) => {
 
 export const setValue = (key, value, broadcast = true) => {
   console.log("setValue", key, value, broadcast);
-  window._store.set(key, value, broadcast);
+  _store.set(key, value, broadcast);
 };
