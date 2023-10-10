@@ -1,6 +1,6 @@
 # app-store-distributed-hooks
 
-This is a starter repo for using [Haxademic’s AppStoreDistributed](https://github.com/cacheflowe/haxademic.js/blob/master/src/app-store-distributed.es6.js) with React via hooks. The app allows all clients to connect over websockets and share state in real time.
+This is a starter repo for using the [haxademic.js AppStoreDistributed](https://github.com/cacheflowe/haxademic.js/blob/master/src/app-store-distributed.es6.js) with React via hooks. The app allows all clients to connect over websockets and share state in real time.
 
 ![AppStoreDistributed Demo](./public/AppStoreDistributed_Demo.gif)
 
