@@ -4,7 +4,7 @@ import AppStoreDistributed from "./haxademic/app-store-distributed";
 import App from "./App";
 import "./index.css";
 
-new AppStoreDistributed("ws://10.0.0.71:8082");
+new AppStoreDistributed(`ws://${import.meta.env.VITE_IP_ADDRESS || 'localhost'}:${import.meta.env.VITE_WS_PORT || 8082}`);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

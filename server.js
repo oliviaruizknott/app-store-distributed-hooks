@@ -1,3 +1,4 @@
+import dotenv from 'dotenv';
 import WebSocket, { WebSocketServer } from 'ws';
 
 const GREEN = "42m";
@@ -9,7 +10,8 @@ const eventLog = (msg, color=GREEN) => {
   console.log("===================================");
 }
 
-const wssPort = 8082;
+dotenv.config();
+const wssPort = process.env.VITE_WS_PORT || 8082;
 const wss = new WebSocketServer({ port: wssPort });
 eventLog(`WebSocket server is listening on port ${wssPort}`);
 
